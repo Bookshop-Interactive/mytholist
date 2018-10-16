@@ -3,6 +3,7 @@ import { Route, Switch, Link } from 'react-router-dom';
 import Landing from './Landing/Landing';
 import Home from './Home/Home';
 import Edit from './Edit/Edit';
+import NoMatch from './404/NoMatch';
 
 class App extends React.Component {
   state = {};
@@ -21,6 +22,7 @@ class App extends React.Component {
           <Route exact path="/" component={Landing} />
           <Route path="/home" component={Home} />
           <Route path="/edit/:id" component={Edit} />
+          <Route component={NoMatch} />
         </Switch>
       </>
     );
